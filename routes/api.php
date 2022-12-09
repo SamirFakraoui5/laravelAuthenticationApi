@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\technicienController;
+use App\Http\Controllers\API\AuthTechnicienController;
 use App\Http\Controllers\API\TechController;
 /*
 |--------------------------------------------------------------------------
@@ -25,11 +25,11 @@ Route::group([
     'prefix' => 'auth'
 
 ], function ($router) {
-    Route::post('login', 'App\Http\Controllers\API\TechnicienController@login');
-    Route::post('register', 'App\Http\Controllers\API\TechnicienController@register');
-    Route::post('logout', 'App\Http\Controllers\API\TechnicienController@logout');
-    Route::post('refresh', 'App\Http\Controllers\API\TechnicienController@refresh');
-    Route::get('user-profile', 'App\Http\Controllers\API\TechnicienController@userProfile');
+    Route::post('login', 'App\Http\Controllers\API\AuthTechnicienController@login');
+    Route::post('register', 'App\Http\Controllers\API\AuthTechnicienController@register');
+    Route::post('logout', 'App\Http\Controllers\API\AuthTechnicienController@logout');
+    Route::post('refresh', 'App\Http\Controllers\API\AuthTechnicienController@refresh');
+    Route::get('user-profile', 'App\Http\Controllers\API\AuthTechnicienController@userProfile');
 });
 
 Route::get('technicien','App\Http\Controllers\API\TechController@index');

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 
-class TechnicienController extends Controller
+class AuthTechnicienController extends Controller
 {
     /**
      * Create a new AuthController instance.
